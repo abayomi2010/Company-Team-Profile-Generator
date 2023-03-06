@@ -17,7 +17,10 @@ const idList = [];
 
 const appMenu = () => {
     function buildTeam() {
-
+        if (!fs.existsSync(OUTPUT_DIR)) {
+            fs.mkdirSync(OUTPUT_DIR);
+        }
+        fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }
 
     function addIntern () {
@@ -46,10 +49,10 @@ const appMenu = () => {
                 message: "What is your intern School?",
             }
         ]).then (answers => {
-            const intern = new intern(answers.internName, answers.internId, answers.internEmail, answers.internSchol);
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
             teamMembers.push(intern);
             idList.push(answers.internId);
-            console.log(intern);
+            // console.log(intern);
             createTeam();
         })
     }
@@ -84,7 +87,7 @@ const appMenu = () => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
             teamMembers.push(engineer);
             idList.push(answers.engineerId);
-            console.log(engineer);
+            // console.log(engineer);
             createTeam();
         })
     }
