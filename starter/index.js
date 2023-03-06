@@ -21,7 +21,37 @@ const appMenu = () => {
     }
 
     function addIntern () {
+        inquirer.prompt([
+            {
+                type: "input",
+                name: "internName",
+                message: "What is your intern name ?",
+            },
 
+            {
+                type: "input",
+                name: "internId",
+                message: "What is your intern id?",
+            }, 
+
+            {
+                type: "input",
+                name: "internEmail",
+                message: "What is your intern email?",
+            }, 
+
+            {
+                type: "input",
+                name: "internSchool",
+                message: "What is your intern School?",
+            }
+        ]).then (answers => {
+            const intern = new intern(answers.internName, answers.internId, answers.internEmail, answers.internSchol);
+            teamMembers.push(intern);
+            idList.push(answers.internId);
+            console.log(intern);
+            createTeam();
+        })
     }
 
 
