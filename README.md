@@ -1,4 +1,4 @@
-# Organisation-group-Profile-Generator
+# Organisation-Group-Profile-Generator
 
 ## Description
 This application generates a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
