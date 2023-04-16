@@ -9,8 +9,7 @@ This application generates a webpage that displays my team's basic info so that 
 
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 
-![HTML webpage titled “My Team” features boxes listing employee names, titles, and other key info.](./image/webpage-screenshot.png)
-
+![HTML webpage titled “My Team” features boxes listing employee names, titles, and other key info.](./image/Screenshot%20(38).png)
 
 ## Installation
 
@@ -45,7 +44,9 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
   npm test
   ```
 
-  
+
+  ## Deployement
+  A deployed version can be testes [here](https://abayomi2010.github.io/Team-Profile-Generator/) 
   
   ### Questions
   Open an issue if you have any questions about the repo, or contact me directly at abayomibalogun2010@gmail.com. You can find more of my work at [abayomibalogun2010](https://github.com/abayomibalogun2010) 
